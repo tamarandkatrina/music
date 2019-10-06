@@ -1,0 +1,56 @@
+<head>
+    <title>Tamar & Katrina</title>
+    <meta name="description" content="Website Description Here">
+    <meta name="tags" content="Search Tags Here">
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <audio></audio>
+    <grid id="wrapper" type="rows">
+        <grid id="header" size="60px" type="columns">
+            <block id="title">Tamar & Katrina</block>
+        </grid>
+        <grid id="content" type="columns">
+            <grid id="sidebar" size="300px" type="rows">
+                <text id="side-header" size="30px">Music Catalogue</text>
+                <block id="catalogue"></block>
+            </grid>
+            <block id="main" type="rows"></block>
+        </grid>
+        <grid id="footer" size="40px" type="columns">
+            <block id="previous" class="icon" size="50px">skip_previous</block>
+            <block id="play" class="icon" size="50px">play_circle_outline</block>
+            <block id="next" class="icon" size="50px">skip_next</block>
+            <block size="50px" id="current-time">00:00</block>
+            <grid id="time" type="columns">
+                <block id="time-fill">
+                    <block id="time-knob"></block>
+                </block>
+            </grid>
+            <block size="50px" id="total-time">00:00</block>
+            <block id="volume" class="icon" size="50px">volume_up</block>
+            <block id="vol" size="150px">
+                <block id="vol-fill">
+                    <block id="vol-knob"></block>
+                </block>
+            </block>
+        </grid>
+    </grid>
+    <template id="album">
+        <grid class="album" key="${album.key}" type="rows">
+            <block class="album-cover" size="250px" style="background-image: url('./music/${album.key}/cover.jpg')"></block>
+            <text size="40px" class="album-title">${album.title}</text>
+            <grid class="album-tracks"></grid>
+        </grid>
+    </template>
+    <template id="track">
+        <grid class="track" key="${track.key}" type="columns">
+            <text size="30px" class="track-number">${track.key}.</text>
+            <text class="track-title">${track.title}</text>
+            <text size="50px" class="track-length">${track.length}</text>
+        </grid>
+    </template>
+</body>
+
+<!-- tamarandkatrina@gmail.com -->

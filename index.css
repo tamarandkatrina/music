@@ -1,0 +1,156 @@
+@import url('flexatious.css');
+@import url('fonts.css');
+
+#wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    gap: 1px;
+    background-color: hsl(40, 40%, 30%);
+}
+
+#content {
+    gap: 1px;
+    background-color: hsl(40, 40%, 30%);
+}
+
+#header, #footer {
+    background-color: hsl(40, 40%, 40%);
+}
+
+#main, #sidebar {
+    background-color: hsl(40, 40%, 50%);
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+}
+
+.album-cover {
+    height: 240px;
+    width: 240px;
+    margin-left: 5px;
+    background-size: cover;
+    border: 2px solid hsl(40, 40%, 30%);
+}
+
+#title {
+    font-size: 35px;
+    font-family: 'Great Vibes';
+}
+
+#side-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Oswald';
+    color: hsl(40, 40%, 80%);
+}
+
+#catalogue {
+    border-top: 1px solid hsl(40, 40%, 30%);
+    overflow-y: scroll;
+}
+
+#catalogue {
+    /* height calculation values */
+    --header: 60px;
+    --footer: 40px;
+    --sidebar-title: 30px;
+    --borders: 2px;
+    --margins: 1px;
+    height: calc(100vh - (var(--header) + var(--footer) + var(--sidebar-title) + var(--borders) + var(--margins)));
+}
+
+.album-title {
+    padding-left: 10px;
+    text-align: left;
+    font-style: bold;
+    font-size: 25px;
+    margin-top: 5px;
+    color: hsl(0, 0%, 100%);
+}
+
+.track-title, .track-length, .track-number {
+    padding-left: 5px;
+    text-align: left;
+    margin: unset;
+}
+
+.track {
+    height: 1.2em;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+.track:hover, .icon:hover, .track[active] {
+    color: hsl(0, 0%, 100%);
+}
+
+.track[active] {
+    font-weight: bolder;
+}
+
+.icon {
+    font-family: 'Material Icons';
+    font-size: 30px;
+    cursor: pointer;
+}
+
+*::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+#time, #vol {
+    background-color: hsl(40, 40%, 30%);
+    border-radius: 4px;
+    height: 8px;
+    margin: auto 15px;
+}
+
+#current-time, #total-time {
+    font-size: 18px;
+    line-height: 18px;
+    margin: auto;
+}
+
+#time-fill, #vol-fill {
+    background-color: hsl(40, 40%, 25%);
+    border-radius: 4px;
+    height: 8px;
+    width: 0px;
+    display: block;
+    margin: 0;
+}
+
+#vol-fill {
+    width: 100%;
+}
+
+#time-knob, #vol-knob {
+    border-radius: 4px;
+    height: 8px;
+    width: 8px;
+    transform: scale(2);
+    display: block;
+    background-color: hsl(40, 40%, 20%);
+    margin-right: 0;
+    cursor: pointer;
+}
+
+#time-knob:hover, #vol-knob:hover {
+    transform: scale(2.5);
+}
+
+#volume {
+    font-size: 25px;
+}
